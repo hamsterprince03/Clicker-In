@@ -1,0 +1,61 @@
+﻿<Window x:Class="ClickerIn.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Настройки" Height="500" Width="460" WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        Background="{DynamicResource WindowBackgroundBrush}" Foreground="{DynamicResource ForegroundBrush}"
+        FontSize="{DynamicResource GlobalFontSize}">
+	<Grid Margin="16">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<TabControl Background="Transparent" BorderThickness="0">
+			<TabItem Header="🎨 Вид">
+				<StackPanel Margin="8">
+					<TextBlock Text="Тема" FontWeight="Bold" Margin="0,0,0,4"/>
+					<ComboBox x:Name="CmbTheme" Width="200" HorizontalAlignment="Left" SelectionChanged="Theme_Changed"/>
+					<TextBlock Text="Цвет акцента" FontWeight="Bold" Margin="0,12,0,4"/>
+					<StackPanel Orientation="Horizontal">
+						<TextBox x:Name="TxtAccent" Width="100" Background="{DynamicResource GridBackgroundBrush}"
+                                 Foreground="{DynamicResource ForegroundBrush}" BorderBrush="{DynamicResource BorderBrush}"/>
+						<Border x:Name="AccPreview" Width="28" Height="24" CornerRadius="3" Margin="4,0" BorderThickness="1" BorderBrush="{DynamicResource BorderBrush}"/>
+						<Button Content="OK" Click="ApplyAccent_Click"/>
+					</StackPanel>
+					<TextBlock Text="Размер шрифта" FontWeight="Bold" Margin="0,12,0,4"/>
+					<StackPanel Orientation="Horizontal">
+						<Slider x:Name="SldFont" Width="200" Minimum="10" Maximum="20" Value="13" ValueChanged="Font_Changed"/>
+						<TextBlock x:Name="TxtFont" Margin="8,0,0,0"/>
+					</StackPanel>
+					<CheckBox x:Name="ChkOnTop" Content="Поверх окон" Margin="0,12,0,0"/>
+					<CheckBox x:Name="ChkTray" Content="Сворачивать в трей" Margin="0,4,0,0"/>
+				</StackPanel>
+			</TabItem>
+			<TabItem Header="⌨ Клавиши">
+				<StackPanel Margin="8">
+					<TextBlock Text="Старт/Стоп" FontWeight="Bold" Margin="0,0,0,4"/>
+					<TextBox x:Name="TxtHk1" Width="200" IsReadOnly="True" PreviewKeyDown="Hk1_Key"
+                             Background="{DynamicResource GridBackgroundBrush}" Foreground="{DynamicResource ForegroundBrush}"
+                             BorderBrush="{DynamicResource BorderBrush}" HorizontalAlignment="Left"/>
+					<TextBlock Text="Запись" FontWeight="Bold" Margin="0,12,0,4"/>
+					<TextBox x:Name="TxtHk2" Width="200" IsReadOnly="True" PreviewKeyDown="Hk2_Key"
+                             Background="{DynamicResource GridBackgroundBrush}" Foreground="{DynamicResource ForegroundBrush}"
+                             BorderBrush="{DynamicResource BorderBrush}" HorizontalAlignment="Left"/>
+				</StackPanel>
+			</TabItem>
+			<TabItem Header="⚙ Поведение">
+				<StackPanel Margin="8">
+					<CheckBox x:Name="ChkConfirm" Content="Подтверждать запуск" Margin="0,4,0,0"/>
+					<CheckBox x:Name="ChkLogOn" Content="Вести лог" Margin="0,4,0,0"/>
+					<TextBlock Text="Макс. записей в логе" FontWeight="Bold" Margin="0,12,0,4"/>
+					<TextBox x:Name="TxtMaxLog" Width="80" HorizontalAlignment="Left"
+                             Background="{DynamicResource GridBackgroundBrush}" Foreground="{DynamicResource ForegroundBrush}"
+                             BorderBrush="{DynamicResource BorderBrush}"/>
+				</StackPanel>
+			</TabItem>
+		</TabControl>
+		<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+			<Button Content="Сохранить" Width="100" Click="Save_Click"/>
+			<Button Content="Отмена" Width="100" Click="Cancel_Click" Margin="8,0,0,0"/>
+		</StackPanel>
+	</Grid>
+</Window>
