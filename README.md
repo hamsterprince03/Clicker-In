@@ -1,56 +1,64 @@
-ClickerIn — Desktop Automation Tool
+ClickerIn - инструмент автоматизации рабочего стола
 
-
-
-ClickerIn is a powerful WPF-based desktop automation application designed to record, schedule, and replay mouse and keyboard actions. It features human-like movement simulation.
-
-
-
-Screenshot Placeholder
+ClickerIn - это мощное приложение для автоматизации рабочего стола на основе WPF, предназначенное для записи, планирования и воспроизведения действий мыши и клавиатуры. Оно имитирует движения человека.
 
 
 
 
+Особенности
 
-🚀 Features
+Запись макросов: с высокой точностью записывайте движения мыши и нажатия клавиш.
 
-Macro Recording: Record mouse movements and keystrokes with precision.
+Интеллектуальное воспроизведение:
 
-Smart Playback:
+Гуманизация: Рандомизированные задержки и сглаживание кривой Безье для траекторий движения мыши для имитации поведения человека.
 
-Humanization: Randomized delays and Bézier curve smoothing for mouse paths to simulate human behavior.
+Отслеживание окон: Макросы остаются привязанными к определенным окнам приложения, даже если их перемещают или изменяют размер.
 
-Window Tracking: Macros remain attached to specific application windows even if they are moved or resized.
+Планировщик: Встроенный планировщик задач (ежедневное, разовое или интервальное выполнение).
 
-Scheduler: Built-in task scheduler (daily, one-time, or interval-based execution).
-
-Low-Level Integration: Uses WinAPI (User32.dll) for reliable input simulation and window management.
-
-
-
-🛠 Tech Stack
-
-Language: C# (.NET Framework / Core)
-
-UI Framework: WPF (Windows Presentation Foundation)
-
-Architecture: MVVM (Model-View-ViewModel) pattern
-
-Libraries:
-
-Newtonsoft.Json for data persistence.
-
-NHotkey for global hotkey management.
-
-Interoperability: P/Invoke (WinAPI) for low-level system hooks.
+Низкоуровневая интеграция: использует WinAPI (User32.dll) для надежного моделирования ввода и управления окнами.
 
 
 
-👨‍💻 Author
 
-Hamster — Student \& .NET Developer suitable for freelance projects.
 
-Looking for automation tasks, WPF application development, and tool creation.
+Технический стек
+
+Язык: C# (.NET Framework / Core)
+
+Структура пользовательского интерфейса: WPF (Windows Presentation Foundation)
+
+Архитектура: шаблон MVVM (Model-View-ViewModel)
+
+Библиотеки:
+
+Newtonsoft.Json для сохранения данных.
+
+NHotkey для глобального управления горячими клавишами.
+
+Совместимость: P/Invoke (WinAPI) для низкоуровневых системных подключений.
+
+
+
+
+Скачать готовую программу
+Вы можете скачать последнюю версию ClickerIn здесь:
+ [Скачать ClickerIn v1.0.0](https://github.com/hamsterprince03/Clicker-In/releases/download/v1.0.0/ClickerIn-v1.0.0.zip)
+
+После скачивания:
+1. Распакуйте архив в любую удобную папку.
+2. Запустите файл `ClickerIn.exe`.
+3. Для корректной работы глобальных горячих клавиш может потребоваться запуск от имени администратора.
+
+
+
+
+Автор
+
+Хомяк — студент и .NET- разработчик, подходящий для внештатных проектов.
+
+Ищу работу по автоматизации, разработке приложений на WPF и созданию инструментов.
 
 
 
